@@ -639,5 +639,5 @@
   }
 
   .tag-list li::after:last-child {
-    content: '';
+    content: ' ';
   }
