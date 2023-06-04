@@ -31,13 +31,15 @@ input[type='checkbox'] {
   cursor: pointer;
   z-index: 100;
   transition: width 0.5s, height 0.5s;
-  /* animation: pulse 1s ease-in-out alternate; */
 }
 
 input:checked + .menu-open-button {
   width: 60px;
   height: 60px;
-  animation: pulse 0.5s ease-in-out alternate;
+}
+
+input:not(:checked) + .menu-open-button {
+  animation: pulse 1s ease-in-out alternate;
 }
 
 .menu-line {
@@ -116,13 +118,19 @@ input:checked + label ~ a:nth-child(7) {
 
 @keyframes pulse {
   0% {
+    transform: scale(1.2);
+  }
+  20% {
     transform: scale(1);
   }
-  /* 25% {
+  40% {
     transform: scale(1.2);
-  } */
-  75% {
-    transform: scale(0.8);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.2);
   }
   100% {
     transform: scale(1);
