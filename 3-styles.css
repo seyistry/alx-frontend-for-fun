@@ -1,0 +1,130 @@
+* {
+  /* border: 1px solid red; */
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+
+input[type='checkbox'] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.menu-open-button {
+  width: 80px;
+  height: 80px;
+  background: #e1013c;
+  position: absolute;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  z-index: 100;
+  transition: width 1.1s, height 1.1s;
+  /* animation: pulse 1s ease-in-out alternate; */
+}
+
+input:checked + .menu-open-button {
+  width: 60px;
+  height: 60px;
+  animation: pulse 1s ease-in-out alternate;
+}
+
+.menu-line {
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  position: relative;
+  transition: all 0.1s;
+}
+
+input:checked + label > span.menu-line.menu-line-1 {
+  transform: rotate(45deg);
+  top: 7px;
+}
+
+input:checked + label > span.menu-line.menu-line-2 {
+  opacity: 0;
+}
+
+input:checked + label > span.menu-line.menu-line-3 {
+  transform: rotate(-45deg);
+  top: -5px;
+}
+
+.menu-item {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  border-radius: 30px;
+  background: #e1013c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  box-sizing: border-box;
+  transition: visibility 0.35s, transform 1s;
+}
+
+.menu-item:hover {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e1013c;
+  border: 1px solid red;
+}
+
+input:checked + label ~ a:nth-child(3) {
+  transform: translate(0, 70px);
+  z-index: -1;
+}
+
+input:checked + label ~ a:nth-child(4) {
+  transform: translate(0, 140px);
+  z-index: -1;
+}
+
+input:checked + label ~ a:nth-child(5) {
+  transform: translate(0, 210px);
+  z-index: -1;
+}
+
+input:checked + label ~ a:nth-child(6) {
+  transform: translate(0, 280px);
+  z-index: -1;
+}
+
+input:checked + label ~ a:nth-child(7) {
+  transform: translate(0, 350px);
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  /* 25% {
+    transform: scale(1.2);
+  } */
+  75% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
