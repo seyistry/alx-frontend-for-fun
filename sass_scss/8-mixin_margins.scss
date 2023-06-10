@@ -1,0 +1,12 @@
+/* test debug */
+@mixin horizontal($size: 10px) {
+  margin-left: $size;
+  margin-right: $size;
+}
+body {
+  @include horizontal;
+}
+
+div {
+  @include horizontal($size: 15);
+}

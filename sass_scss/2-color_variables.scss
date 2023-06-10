@@ -1,0 +1,15 @@
+/* test debug */
+$textColor: #3d3d3d;
+$bgColor: #6d6d6d;
+body {
+  color: $textColor;
+  background-color: $bgColor;
+}
+
+p {
+  color: $textColor;
+}
+
+h2 {
+  background-color: $bgColor;
+}

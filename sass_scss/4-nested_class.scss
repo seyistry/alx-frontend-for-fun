@@ -1,0 +1,9 @@
+/* test debug */
+$pryColor: #3D3D3D;
+$secColor: #FF0000;
+body {
+  color: $pryColor;
+  .red {
+	color: $secColor;
+  }
+}
