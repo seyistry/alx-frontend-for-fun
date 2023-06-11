@@ -1,0 +1,18 @@
+/* test debug */
+%shared {
+  font-size: 12px;
+}
+
+.info {
+  @extend %shared
+}
+
+.success {
+  color: #00ff00;
+  @extend %shared
+}
+
+.warning {
+  color: #ff0000;
+  @extend %shared
+}
